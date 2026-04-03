@@ -1,0 +1,17 @@
+{
+  "name": "tidecode-ai",
+  "version": "1.0.0",
+  "description": "TideCode AI - Marketing Consulting Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "TideCode AI",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
