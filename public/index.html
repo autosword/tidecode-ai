@@ -974,17 +974,19 @@
 
       <!-- Contact form -->
       <div class="lg:col-span-3 card-glass rounded-3xl p-8 fade-in fade-in-delay-1">
-        <form class="space-y-5" action="https://formspree.io/randy@zesty.io" method="POST">
+        <form class="space-y-5" action="https://formspree.io/apuzzo@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New TideCode AI Inquiry" />
+          <input type="hidden" name="_next" value="https://tidecode-ai.onrender.com/thank-you.html" />
+          <input type="hidden" name="_replyto" value="" id="hidden-replyto" />
+          <input type="hidden" name="_captcha" value="false" />
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
               <label class="block text-ocean-300 text-sm mb-2">Your Name</label>
-              <input type="text" name="name" placeholder="Jane Smith" class="form-input" />
+              <input type="text" name="name" placeholder="Jane Smith" class="form-input" required />
             </div>
             <div>
               <label class="block text-ocean-300 text-sm mb-2">Email Address</label>
-              <input type="email" name="email" placeholder="jane@yourbusiness.com" class="form-input" />
-              <input type="hidden" name="_replyto" />
+              <input type="email" name="email" id="email-field" placeholder="jane@yourbusiness.com" class="form-input" required oninput="document.getElementById('hidden-replyto').value=this.value" />
             </div>
           </div>
           <div>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — TideCode AI</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            display: ['Syne', 'sans-serif'],
+          },
+          colors: {
+            ocean: {
+              900: '#0C2340',
+              800: '#0D2E50',
+              700: '#1B4965',
+              600: '#2C6E8A',
+              500: '#5FA8D3',
+              400: '#8ABFDF',
+              300: '#BEE9E8',
+            },
+            electric: {
+              cyan: '#00D4FF',
+              purple: '#7C3AED',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'DM Sans', sans-serif; background-color: #0C2340; color: #F0F4EF; }
+    .glass-nav {
+      background: rgba(12, 35, 64, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(95, 168, 211, 0.15);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #00D4FF, #7C3AED);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #00D4FF, #7C3AED);
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(0, 212, 255, 0.45);
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Nav -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <div class="relative flex items-center justify-center w-10 h-10">
+          <div class="absolute inset-0 bg-gradient-to-br from-electric-cyan to-electric-purple rounded-xl opacity-80"></div>
+          <svg class="relative z-10 w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <span class="font-display font-700 text-lg text-white leading-tight">TideCode <span class="gradient-text">AI</span></span>
+          <div class="text-xs text-ocean-300 leading-none" style="font-size:0.65rem;">South Kingstown, RI</div>
+        </div>
+      </a>
+      <a href="/" class="hidden md:inline-block text-sm text-ocean-300 hover:text-white transition-colors">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="flex-1 flex items-center justify-center px-6 pt-24 pb-16">
+    <div class="max-w-lg w-full text-center">
+
+      <!-- Success icon -->
+      <div class="w-24 h-24 mx-auto mb-8 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(124,58,237,0.2)); border: 1px solid rgba(0,212,255,0.35);">
+        <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="url(#check-grad)" stroke-width="2.5">
+          <defs>
+            <linearGradient id="check-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00D4FF"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <h1 class="font-display font-800 text-5xl md:text-6xl text-white mb-4">
+        Thank <span class="gradient-text">You!</span>
+      </h1>
+
+      <p class="text-ocean-300 text-lg leading-relaxed mb-8">
+        We received your message and will get back to you within 24 hours.
+      </p>
+
+      <p class="text-ocean-400 text-sm mb-10">
+        In the meantime, feel free to reach us directly at
+        <a href="mailto:hello@tidecodeai.com" class="text-electric-cyan hover:underline">hello@tidecodeai.com</a>
+        or <a href="tel:+14015550192" class="text-electric-cyan hover:underline">(401) 555-0192</a>.
+      </p>
+
+      <a href="/" class="btn-primary text-base">Back to Home</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: #060f1e; border-top: 1px solid rgba(27,73,101,0.4);" class="py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <div class="flex items-center gap-3">
+        <div class="relative flex items-center justify-center w-8 h-8">
+          <div class="absolute inset-0 bg-gradient-to-br from-electric-cyan to-electric-purple rounded-lg opacity-80"></div>
+          <svg class="relative z-10 w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <span class="font-display font-700 text-white text-sm">TideCode <span class="gradient-text">AI</span></span>
+      </div>
+      <p class="text-ocean-500 text-xs">© 2024 TideCode AI, LLC. All rights reserved. South Kingstown, Rhode Island.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
